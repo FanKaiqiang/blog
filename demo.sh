@@ -1,4 +1,4 @@
-if [ -d $1 ]; then//判断目录是否存在
+if [ -d $1 ]; then //判断目录是否存在
     exit
 else
     mkdir $1
