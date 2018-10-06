@@ -1,0 +1,59 @@
+html{
+    background: #DDDDDD;
+}
+.wrapper{
+    display: flex;/*将图片选择器居中*/
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;/*文字排列在选择器下方*/
+  }
+  .wrapper .tip{/*下方文字*/
+    margin:10px;
+    font-size: 18px;
+  }
+  .imagePicker{
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;/*圆圈的宽高与边框*/
+    display: flex;
+    justify-content: center;
+    align-items: center;/*居中图片*/
+    border-radius: 50%;/*圆形*/
+    overflow: hidden;/*防止溢出*/
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);/*内阴影*/
+    position: relative;/*相对定位*/
+  }
+  .imagePicker:hover{
+    cursor: pointer;/*手型*/
+  }
+  
+  .imagePicker img{
+    max-width: 100%;/*设置图片宽高，并消除底下空隙*/
+    max-height: 100%;
+    vertical-align: top;
+  }
+  .imagePicker input[type=file]{
+    position: absolute;/*绝对定位*/
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;/*透明*/
+    z-index: 1;/*浮于顶部*/
+    cursor: pointer;/*手型*/
+  }
+  .imagePicker .mask{/*阴影*/
+    display: none;
+    position: absolute;/*绝对定位*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);/*阴影深度*/
+    color: white;
+  }
+  .imagePicker:hover .mask{
+    display: flex;
+    justify-content: center;
+    align-items: center;/*居中文字*/
+  }
