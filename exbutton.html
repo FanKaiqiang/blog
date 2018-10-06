@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>涟漪按钮</title>
+    <link rel="stylesheet" href="./exbutton.css"
+</head>
+
+<body>
+    <div class="wrapper">
+    <button id=b class="exButton">
+        <span class="circle"></span>
+        涟漪按钮
+    </button>
+    </div>
+</body>
+<script>
+    b.onclick = function () {
+        b.querySelector('.circle')
+            .classList.add('active')
+    }
+
+    b.querySelector('.circle').addEventListener('transitionend',
+        function () {
+            b.querySelector('.circle')
+                .classList.remove('active')
+        })</script>
+
+</html>

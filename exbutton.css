@@ -1,0 +1,49 @@
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.exButton{
+    box-sizing: border-box;
+    display: inline-block;
+    background: none;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid gray;
+    transition: all 0.5s;
+    position: relative;
+    background: #E8F2FF;
+    border-radius:6px;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .exButton:hover{
+      background: #DEE1E6;
+  }
+  .exButton:focus{
+    outline: none;
+  }
+  
+  .exButton > .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: gray;
+    margin-left: -5px;
+    margin-top: -5px;
+    transition: transform 0.5s;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .exButton> .circle.active{
+    transform: scale(10);
+    visibility: visible;
+  }
