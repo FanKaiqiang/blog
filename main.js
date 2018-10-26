@@ -12,7 +12,7 @@ portfolio3.onclick = function () {
 var topbar =document.getElementById('topbar')
 setTimeout(function () {
     startWelcome.classList.remove('active')
-}, 1600);
+}, 1000);
 
 window.onload=function(){
     if (window.scrollY > 0) {
@@ -42,7 +42,7 @@ window.onload=function(){
     setTimeout(function () {
         topbar.classList.remove('offset')
         specialTags[0].classList.remove('offset')
-    }, 1600);
+    }, 1000);
 }
 
 
